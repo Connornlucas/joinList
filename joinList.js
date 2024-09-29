@@ -1,4 +1,5 @@
 /*
+
  * Write a function that joins the contents of conceptList together
  * into one String, concepts, with each list item separated from
  * the previous by a comma.
@@ -11,6 +12,28 @@
 
 // Write our function (we must define it too!) below
 // ...
+function joinList(array){
+  let list = ` `
+  let count = 0
+  
+  for (items of array){
+    if (typeof items === 'string') {
+      count++;
+    }
+  }
+  
+  for (items of array){
+    if (typeof items === 'string') {
+      list += items;
+      count--;
+      if (count > 0){
+        list += ', '
+      }
+    }
+  }
+  return list;
+}
+
 
 // Test / Driver Code below...
 const conceptList = ["gists", "types", "operators", "iteration", "problem solving"];
