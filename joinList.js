@@ -12,22 +12,22 @@
 
 // Write our function (we must define it too!) below
 // ...
-function joinList(array){
-  let list = ` `
-  let count = 0
+function joinList(array) {
+  let list = ``;
+  let count = 0;
   
-  for (items of array){
+  for (const items of array) {
     if (typeof items === 'string') {
       count++;
     }
   }
   
-  for (items of array){
+  for (const items of array) {
     if (typeof items === 'string') {
       list += items;
       count--;
-      if (count > 0){
-        list += ', '
+      if (count > 0) {
+        list += ', ';
       }
     }
   }
